@@ -34,7 +34,7 @@ def flat_score(
         if i + window_size >= len(history):
             return scores
 
-        encoded_seq = bitarray_util.ba2int(history[i: window_size + i])
+        encoded_seq = bitarray_util.ba2int(history[i : window_size + i])
         next_state = history[window_size + i]
 
         for uuid, strategy in strategies.items():
