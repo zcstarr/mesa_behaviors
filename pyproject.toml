@@ -140,6 +140,7 @@ legacy_tox_ini = """
 [tox]
 isolated_build = true
 envlist = p37,lint 
+
 [testenv]
 whitelist_externals = poetry
 commands =

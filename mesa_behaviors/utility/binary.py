@@ -1,10 +1,13 @@
-from typing import Callable, Dict
-from mypy_extensions import TypedDict
 from abc import ABC
-from mesa_behaviors.utility.utility import BaseUtility
-from mesa_behaviors.strategies.binary_strategy import BinaryStrategies
+from typing import Callable, Dict
+
 from bitarray import bitarray
 import bitarray.util as bitarray_util
+from mypy_extensions import TypedDict
+
+from mesa_behaviors.strategies.binary_strategy import BinaryStrategies
+from mesa_behaviors.utility.utility import BaseUtility
+
 
 BinaryHistoryFunc = Callable[[], bitarray]
 

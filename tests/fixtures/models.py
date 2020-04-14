@@ -1,9 +1,11 @@
-from mesa_behaviors.models.model import BaseModel
-from mesa.time import BaseScheduler
 from mesa.datacollection import DataCollector
-from mesa_behaviors.history.binary import BinaryHistory
+from mesa.time import BaseScheduler
+
 from mesa_behaviors.agents.population import AgentPopulation
+from mesa_behaviors.history.binary import BinaryHistory
+from mesa_behaviors.models.model import BaseModel
 from tests.fixtures.agents import DummyAgentFeatures
+
 
 # There exists some function that you can Type to reference the required returned state of an agent So an AgentPopulation
 # is typed to return a subset of state that you can reference in the model to build aggregate statistics

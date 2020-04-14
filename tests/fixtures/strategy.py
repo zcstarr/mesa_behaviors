@@ -1,8 +1,6 @@
 import math
 import random
-
-from typing import Dict
-from typing import NamedTuple
+from typing import Dict, NamedTuple
 from uuid import uuid4
 
 

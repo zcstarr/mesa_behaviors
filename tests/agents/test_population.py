@@ -1,12 +1,13 @@
+import random
+
 from mesa_behaviors.agents.population import (
     AgentLabels,
     AgentTypeMap,
     generate_population,
 )
+from tests.fixtures import strategy
 from tests.fixtures.agents import DummyAgent
 from tests.fixtures.utility import DummyUtility, DummyUtility1
-from tests.fixtures import strategy
-import random
 
 
 def dummy_distribution(agent_labels: AgentLabels, size: int) -> AgentLabels:

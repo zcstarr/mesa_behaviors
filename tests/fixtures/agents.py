@@ -1,10 +1,12 @@
 # strategy maps a set of historical states to future actions
 # a behavior chooses a strategy that maximizes the utility of that behavior
 # should take generics CoolAgent(BaseAgent[Strategy,bitarray,])
+from typing import NamedTuple, TypeVar
+
 from mesa_behaviors.agents.agents import BaseAgent
-from typing import TypeVar, NamedTuple
-from mesa_behaviors.utility.utility import BaseUtility
 from mesa_behaviors.utility.binary import BinaryUtilityScore
+from mesa_behaviors.utility.utility import BaseUtility
+
 
 S = TypeVar("S")
 H = TypeVar("H")

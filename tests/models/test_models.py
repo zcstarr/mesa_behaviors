@@ -1,14 +1,14 @@
-from tests.fixtures.models import DummyModel
-from mesa_behaviors.history.binary import BinaryHistory
-from tests.fixtures.agents import DummyAgent
-from mesa_behaviors.utility.binary import BinaryMajorityUtility, BinaryMinorityUtility
-from mesa_behaviors.strategies.binary_strategy import generate_binary_strategies
-from mesa_behaviors.agents.population import generate_population, AgentLabels
+import random
 
 from bitarray import bitarray
-
-import random
 from mesa.time import RandomActivation
+
+from mesa_behaviors.agents.population import AgentLabels, generate_population
+from mesa_behaviors.history.binary import BinaryHistory
+from mesa_behaviors.strategies.binary_strategy import generate_binary_strategies
+from mesa_behaviors.utility.binary import BinaryMajorityUtility, BinaryMinorityUtility
+from tests.fixtures.agents import DummyAgent
+from tests.fixtures.models import DummyModel
 
 
 def dummy_distribution(agent_labels: AgentLabels, size: int) -> AgentLabels:

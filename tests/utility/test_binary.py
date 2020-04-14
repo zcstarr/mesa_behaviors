@@ -1,11 +1,10 @@
-from mesa_behaviors.utility import binary
 from typing import List
-from mesa_behaviors.strategies.binary_strategy import (
-    BinaryStrategies,
-    BinaryStrategy,
-)
-from bitarray import bitarray
 from uuid import uuid4
+
+from bitarray import bitarray
+
+from mesa_behaviors.strategies.binary_strategy import BinaryStrategies, BinaryStrategy
+from mesa_behaviors.utility import binary
 
 
 def _create_binary_map(predictions: List[int]):

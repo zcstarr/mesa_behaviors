@@ -1,5 +1,6 @@
+from typing import Callable, Sequence
+
 from mesa_behaviors.utility.utility import BaseUtility
-from typing import Sequence, Callable
 
 
 class DummyUtility(BaseUtility[int, Sequence[int], int]):
