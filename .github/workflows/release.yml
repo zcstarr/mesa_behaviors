@@ -2,7 +2,7 @@ name: Semantic Release
 
 on:
   issues:
-    types: [opened]
+    types: [milestoned]
 jobs:
   release:
     runs-on: ubuntu-latest
@@ -24,7 +24,9 @@ jobs:
             repo: context.repo.repo,
             username: context.actor,
           })
-          console.log(result)
+          if(result.data !== 'admins') {
+            throw Error("User does not have permissions to release")
+          }
 #    - name: Python Semantic Release
 #      uses: relekang/python-semantic-release@master
 #      with:
