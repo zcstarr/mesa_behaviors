@@ -11,13 +11,13 @@ build-backend = "poetry.masonry.api"
 
 [tool.poetry]
 name = "mesa_behaviors"
-version = "0.1.0"
+version = "0.0.0"
 description = "A framework for developing shareable Mesa Agents, Models and creating extensible Utility functions"
 
 license = "Apache 2.0"
 
 authors = [
-    "Zane Starr <zane@zanestarr.com>"
+    "Zane Starr <zcstarr@gmail.com>"
 ]
 
 readme = 'README.md'  # Markdown files are supported
@@ -51,6 +51,7 @@ codecov = "^2.0.22"
 bitarray = "^1.2.1"
 mesa = "^0.8.6"
 tox = "^3.14.6"
+python-semantic-release = "^5.2.0"
 
 [tool.poetry.dev-dependencies]
 black = "^19.10b0"
@@ -64,6 +65,7 @@ pytest-cov = "^2.8.1"
 mypy-extensions = "^0.4.3"
 typing-extensions = "^3.7.4"
 tox = "^3.14.6"
+python-semantic-release = "^5.2.0"
 
 [tool.towncrier]
 package = "mesa_behaviors"
@@ -180,6 +182,6 @@ version_variable = "pyproject.toml:version"
 version_source = "commit"
 commit_subject = "chore: bumping version to v{version}"
 commit_message = ""
-commit_author = "Tokesim <support@tokesim.org>"
+commit_author = "Zane <zcstarr@gmail.com>"
 build_command = "poetry build"
 upload_to_release = "false"
