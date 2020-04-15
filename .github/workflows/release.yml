@@ -25,7 +25,7 @@ jobs:
             username: context.actor,
           })
           if(result.data !== 'admin') {
-            throw Error("User does not have permissions to release")
+            throw Error("User does not have permissions to release only has permissions:" + result.data)
           }
     - name: Python Semantic Release
       uses: relekang/python-semantic-release@master
