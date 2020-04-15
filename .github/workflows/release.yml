@@ -6,6 +6,9 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: [3.7]
     if: startsWith(github.event.issue.title, 'Release new version')
 
     steps:
