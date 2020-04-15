@@ -24,8 +24,7 @@ jobs:
             repo: context.repo.repo,
             username: context.actor,
           })
-          console.log(`${JSON.stringify(result.data)}`)
-          if(result.data !== 'admin') {
+          if(result.data.permission !== 'admin') {
             throw Error("User does not have permissions to release only has permissions:" + result.data)
           }
     - name: Python Semantic Release
