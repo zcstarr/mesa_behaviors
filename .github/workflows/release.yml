@@ -19,11 +19,12 @@ jobs:
       with:
         github-token: ${{secrets.GITHUB_TOKEN}}
         script: |
-          await github.repos.getCollaboratorPermissionLevel({
+          const {result} = await github.repos.getCollaboratorPermissionLevel({
             owner: context.repo.owner,
             repo: context.repo.repo,
             username: context.actor. 
           })
+          console.log(result)
 #    - name: Python Semantic Release
 #      uses: relekang/python-semantic-release@master
 #      with:
