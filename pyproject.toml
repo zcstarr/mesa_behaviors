@@ -139,8 +139,8 @@ exclude = '''
 legacy_tox_ini = """
 [tox]
 isolated_build = true
-envlist = p37,lint 
-[testenv]
+envlist = p37,lint,test
+[testenv:test]
 whitelist_externals = poetry
 commands =
     poetry install -v
@@ -148,7 +148,6 @@ commands =
 extras =
     test
     docs: doc
-
 [testenv:lint]
 basepython = python3
 whitelist_externals = poetry
