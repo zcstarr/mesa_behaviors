@@ -24,15 +24,15 @@ jobs:
             repo: context.repo.repo,
             username: context.actor,
           })
-          if(result.data !== 'admins') {
+          if(result.data !== 'admin') {
             throw Error("User does not have permissions to release")
           }
-#    - name: Python Semantic Release
-#      uses: relekang/python-semantic-release@master
-#      with:
-#        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        pypi_username: __token__ 
-#        pypi_password: ${{ secrets.PYPI_PASSWORD }}
+    - name: Python Semantic Release
+      uses: relekang/python-semantic-release@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        pypi_username: __token__ 
+        pypi_password: ${{ secrets.PYPI_PASSWORD }}
     - name: Close release triggering issue
       uses: actions/github-script@0.9.0
       env:
@@ -45,16 +45,4 @@ jobs:
             owner: context.repo.owner,
             repo: context.repo.repo,
             body: '🚀 Successfully released project'
-          })
-          await github.issues.addLabels({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            labels: ['released']
-          })
-          await github.issues.update({
-            issue_number: context.issue.number,
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            state: 'closed'
           })
