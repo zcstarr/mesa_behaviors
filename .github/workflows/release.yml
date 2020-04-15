@@ -1,15 +1,9 @@
 name: Semantic Release
 
 on:
-    issues:
-      types: [opened]
-  
-  jobs:
-    deployJob:
-      name: Deployment
-      runs-on: ubuntu-latest
-      # Only run this deployment if the newly opened issue's title starts with 'Release new version'
-  jobs:
+  issues:
+    types: [opened]
+jobs:
   release:
     runs-on: ubuntu-latest
     if: startsWith(github.event.issue.title, 'Release new version')
@@ -34,7 +28,7 @@ on:
 #      uses: relekang/python-semantic-release@master
 #      with:
 #        github_token: ${{ secrets.GITHUB_TOKEN }}
-#        pypi_username: zaner 
+#        pypi_username: __token__ 
 #        pypi_password: ${{ secrets.PYPI_PASSWORD }}
     - name: Close release triggering issue
       uses: actions/github-script@0.9.0
