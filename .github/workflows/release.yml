@@ -22,7 +22,7 @@ jobs:
           const {result} = await github.repos.getCollaboratorPermissionLevel({
             owner: context.repo.owner,
             repo: context.repo.repo,
-            username: context.actor. 
+            username: context.actor,
           })
           console.log(result)
 #    - name: Python Semantic Release
